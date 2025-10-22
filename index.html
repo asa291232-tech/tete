@@ -3,36 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+    <title>Мой Красивый Сайт</title>
     <style>
+        /* Основные стили для красоты */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        header {
             text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in;
         }
+        
         h1 {
-            color: #333;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+        
         p {
-            color: #666;
+            font-size: 1.2em;
+            margin: 20px 0;
         }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+        }
+        
+        /* Анимация появления */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .container { animation: fadeIn 1s ease-in 0.5s both; }
+        
+        /* Responsive для мобильных */
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            p { font-size: 1em; }
+        }
+        
+        /* Стиль для чата (Tawk.to добавит свой виджет в правый нижний угол) */
+        #tawk_xxxxxxxx { z-index: 10000; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Добро пожаловать на мой сайт!</h1>
-        <p>Это простой пример HTML-сайта, который вы можете выложить в сеть.</p>
-        <p>Измените этот текст, чтобы сделать сайт своим!</p>
+        <p>Здесь всё красиво и удобно. На нём живой чат для общения в реальном времени с гостями сайта, чтобы ответить на вопросы и сделать визит приятным.</p>
+    </header>
+    
+    <div class="container">
+        <h2>О сайте</h2>
+        <p>Это пример красивого лендинга. Градиентный фон, полупрозрачные элементы и плавные анимации делают его современным. Добавь свой контент!</p>
+        
+        <h2>Функции</h2>
+        <ul>
+            <li>Responsive дизайн — работает на всех устройствах.</li>
+            <li>Живой чат для мгновенного общения.</li>
+            <li>Легко кастомизировать.</li>
+        </ul>
+        
+        <h2>Контакты</h2>
+        <p>Напиши в чат справа внизу — я отвечу сразу!</p>
     </div>
+    
+    <footer>
+        <p>&copy; 2025 Мой Сайт. Создано с любовью.</p>
+    </footer>
+    
+    <!-- Интеграция живого чата Tawk.to -->
+    <!-- Замени YOUR_PROPERTY_ID на свой ID из https://www.tawk.to/ -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
 </body>
 </html>
